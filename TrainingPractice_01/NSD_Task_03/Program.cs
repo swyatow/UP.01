@@ -7,7 +7,7 @@ namespace NSD_Task_03
         static void Main(string[] args)
         {
             string secretMessage = "Поздравляем! Вы открыли Секретное сообщение!";
-            string password = "password";
+            string password = "книга";
 
             int countOfTries = 1;
 
@@ -17,6 +17,7 @@ namespace NSD_Task_03
                 if(Console.ReadLine() == password)
                 {
                     Console.WriteLine(secretMessage);
+                    Console.ReadKey();
                     break;
                 }else
                 {

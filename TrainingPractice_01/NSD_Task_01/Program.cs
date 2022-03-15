@@ -24,11 +24,13 @@ namespace NSD_Task_01
                 PurchuaseFailed();
                 break;
             }
+            Console.ReadKey();
         }
 
         private static void StartDialog()
         {
-            Console.WriteLine("Добро пожаловать в Магазин \"У Гнома\". Для начала, скажите, сколько у Вас имеется золота?");
+            Console.WriteLine("Добро пожаловать в Магазин \"У Гнома\". " +
+                "Для начала, скажите, сколько у Вас имеется золота?");
             while (true)
             {
                 try
