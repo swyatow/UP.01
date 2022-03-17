@@ -24,6 +24,7 @@ namespace NSD_Task_04
             Console.WriteLine("Удачи!");
             Console.ReadKey();
 
+            //GameLoop
             while(boss.Health > 0 && hero.Health > 0)
             {
                 ShowAllStats();
@@ -42,12 +43,14 @@ namespace NSD_Task_04
                 Console.ReadKey();
                 CountOfTurns++;
             }
+
+            //Проверка условий победы
             if (boss.Health > 0) FightFailed();
             else FightWon();
         }
 
         
-
+        //Общий класс персонажа
         public abstract class Human
         {
             public double Health;
@@ -63,25 +66,21 @@ namespace NSD_Task_04
             public abstract void ShowStats();
         }
 
+        //Класс Босса
         public class Boss : Human
         {
-            //private List<Debuff> debuffs;
             public Boss(double health, double damage, double armor) : base(health, damage, armor) { }
 
+            //Отображение статистики Босса
             public override void ShowStats()
             {
                 Console.WriteLine("\t\tСтатистика Босса" +
                     $"\nОчки Здоровья: {Health}" +
                     $"\nАтака: {Damage}" +
-                    $"\nБроня (процент отраженного урона): {Armor*100}%\n" /*+
-                    $"\nОтрицательные эффекты: {ShowDebuffs()}"*/);
+                    $"\nБроня (процент отраженного урона): {Armor*100}%\n");
             }
 
-            /*private string ShowDebuffs()
-            {
-                
-            }*/
-
+            //Атака Боссом героя
             public void Attack(Hero hero, double customBossDamageMulriplayer, double customHeroArmoreMulriplayer)
             {
                 double HeroDamageLoss = customBossDamageMulriplayer * Damage - Damage * customHeroArmoreMulriplayer;
@@ -91,27 +90,30 @@ namespace NSD_Task_04
             }            
         }
 
+        //Класс Героя
         public class Hero : Human
         {
             public bool IsBarrier = false;
-            public bool IsCoopSpell = false;
+            public bool IsAfterCoopSpell = false;
 
             public Hero(double health, double damage, double armor) : base(health, damage, armor) { }
 
+            //Отображение статистики Героя
             public override void ShowStats()
             {
                 Console.WriteLine("\t\tСтатистика Героя" +
                     $"\nОчки Здоровья: {Health}" +
                     $"\nАтака: {Damage}" +
-                    $"\nБроня (процент отраженного урона): {Armor*100}%\n" /*+
-                    $"\nОтрицательные эффекты: {ShowDebuffs()}"*/);
+                    $"\nБроня (процент отраженного урона): {Armor*100}%\n");
             }
+
+            //Отображение меню выбора действия
             public void SelectAction()
             {
-                if(IsCoopSpell)
+                if(IsAfterCoopSpell)
                 {
                     Console.WriteLine("Вы истощены после использования совместного заклинания! Вы пропускаете этот ход.");
-                    IsCoopSpell = false;
+                    IsAfterCoopSpell = false;
                 }
                 else
                 {
@@ -136,6 +138,7 @@ namespace NSD_Task_04
                 
             }
 
+            //Атака Героя
             public void Attack(Boss boss, double customBossArmor, double customHeroDamageMulriplayer)
             {
                 double BossDamageLoss = customHeroDamageMulriplayer * Damage - Damage * customBossArmor;
@@ -145,6 +148,7 @@ namespace NSD_Task_04
             }
         }
 
+        //Класс заклинаний
         public class Spells
         {
             private Dictionary<string, ChoosenSpell> spells = new Dictionary<string, ChoosenSpell>
@@ -156,6 +160,7 @@ namespace NSD_Task_04
                 {"Coop", CoopSpell},
             };
 
+            //Отображение меню выбора заклинания
             public void ShowSpells()
             {
                 Console.WriteLine("Произнесите заклинание:\n" +
@@ -183,6 +188,7 @@ namespace NSD_Task_04
 
             }
 
+            //Применение заклинания лечения
             static void HealSpell()
             {
                 ShowAllStats();
@@ -190,6 +196,7 @@ namespace NSD_Task_04
                 hero.Health += 120;
             }
 
+            //Применение заклинания удара молнией
             static void ThunderStrikeSpell()
             {
                 ShowAllStats();
@@ -200,6 +207,7 @@ namespace NSD_Task_04
 
             private static int SummonCreaturesCount = 0;
 
+            //Применение заклинания призыва
             static void SummonSpell()
             {
                 ShowAllStats();
@@ -215,6 +223,7 @@ namespace NSD_Task_04
                 }
             }
 
+            //Применение заклинания барьера
             static void BarrierSpell()
             {
                 ShowAllStats();
@@ -222,6 +231,7 @@ namespace NSD_Task_04
                 hero.IsBarrier = true;
             }
 
+            //Применение совместного заклинания
             static void CoopSpell()
             {
                 ShowAllStats();
@@ -230,11 +240,12 @@ namespace NSD_Task_04
                 {
                     Console.WriteLine("Вы проводите мощную магическую атаку вместе со своим существом!");
                     hero.Attack(boss, boss.Armor, 3);
-                    hero.IsCoopSpell = true;
+                    hero.IsAfterCoopSpell = true;
                 }
             }
         }
 
+        //Отображение общего интерфейса игры
         public static void ShowAllStats()
         {
             Console.Clear();
@@ -245,16 +256,18 @@ namespace NSD_Task_04
             Console.WriteLine("-----------------------------------------\n");
         }
 
+        //Сообщение при проигрыше
         private static void FightFailed()
         {
             Console.Clear();
             Console.SetCursorPosition(30, 10);
             Console.WriteLine("Вы проиграли!");
             Console.SetCursorPosition(20, 11);
-            Console.WriteLine("В следующий раз у вас точно все получится!");
+            Console.WriteLine("В следующий раз у Вас точно все получится!");
             Console.ReadKey();
         }
 
+        //Сообщение при выйгрыше
         private static void FightWon()
         {
             Console.Clear();
