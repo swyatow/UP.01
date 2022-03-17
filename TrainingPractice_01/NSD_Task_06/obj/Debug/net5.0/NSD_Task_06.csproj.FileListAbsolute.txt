@@ -1,0 +1,16 @@
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\bin\Debug\net5.0\NSD_Task_06.exe
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\bin\Debug\net5.0\NSD_Task_06.deps.json
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\bin\Debug\net5.0\NSD_Task_06.runtimeconfig.json
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\bin\Debug\net5.0\NSD_Task_06.runtimeconfig.dev.json
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\bin\Debug\net5.0\NSD_Task_06.dll
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\bin\Debug\net5.0\NSD_Task_06.pdb
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\NSD_Task_06.csproj.AssemblyReference.cache
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\NSD_Task_06.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\NSD_Task_06.AssemblyInfoInputs.cache
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\NSD_Task_06.AssemblyInfo.cs
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\NSD_Task_06.csproj.CoreCompileInputs.cache
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\NSD_Task_06.dll
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\refint\NSD_Task_06.dll
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\NSD_Task_06.pdb
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\NSD_Task_06.genruntimeconfig.cache
+C:\Users\slava\Desktop\доки\ДЗ\УП.01\UP.01\TrainingPractice_01\NSD_Task_06\obj\Debug\net5.0\ref\NSD_Task_06.dll
