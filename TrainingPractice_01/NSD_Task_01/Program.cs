@@ -5,9 +5,11 @@ namespace NSD_Task_01
 {
     internal class Program
     {
+        public static Random rnd = new Random();
+
         public static int UserGold = 1;
         public static int CrystalsCount;
-        public static int CrystalCost = 15;
+        public static int CrystalCost = rnd.Next(15, 150);
         public static int CrystalsPlayerCanBuy = 0;
 
         public delegate void CheckPurchuase();

@@ -13,7 +13,7 @@ namespace NSD_Task_07
             Console.WriteLine("Старый массив:");
             for (int i = 0; i < oldArray.Length; i++)
             {
-                oldArray[i] = random.Next();
+                oldArray[i] = random.Next(0,1000);
                 Console.Write(oldArray[i] + " ");
             }
             Console.WriteLine("\nНовый массив:");

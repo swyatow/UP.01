@@ -188,7 +188,7 @@ namespace NSD_Task_05
             CheckInput(out height, 10, "Слишком маленький лабиринт!");
             
 
-            Console.Write("Выберите высоту вашего лабиринта: ");
+            Console.WriteLine("Выберите высоту вашего лабиринта: ");
             CheckInput(out width, 10, "Слишком маленький лабиринт!");
 
             Console.WriteLine("Выбирите количество ключей, которые необходимо собрать, чтобы выйти из лабиринта\n(Если хотите играть без ключей, напишите 0):");
@@ -199,8 +199,22 @@ namespace NSD_Task_05
             }
 
             Console.Write("Включить режим \"Туман войны\"? (д/н) ");
-            string UserAnswer = Console.ReadLine();
-            SelectedMode = modes[UserAnswer];
+
+            string UserAnswer = "";
+            while (true)
+            {
+                try
+                {
+                    UserAnswer = Console.ReadLine();
+                    SelectedMode = modes[UserAnswer];
+                    break;
+                }
+                catch
+                {
+                    Console.WriteLine("Только символы 'д' и 'н'! Повторите ввод!");
+                }
+            }
+            
             IsFogOfWarMode = UserAnswer == "д" ? true : false;
 
             Console.Write("Включить режим \"С врагами\"? (д/н) ");
