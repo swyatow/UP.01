@@ -29,10 +29,10 @@ namespace NSD_Task_07
         {
             for (int i = oldArray.Length - 1; i >= 1; i--)
             {
-                int j = rnd.Next(i + 1);
-                int temp = oldArray[j];
-                oldArray[j] = oldArray[i];
-                oldArray[i] = temp;
+                int randValue = rnd.Next(i + 1);
+                int tempElement = oldArray[randValue];
+                oldArray[randValue] = oldArray[i];
+                oldArray[i] = tempElement;
             }
 
             return oldArray;
