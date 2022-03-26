@@ -13,6 +13,7 @@ namespace NSD_Task_02
                 text = Console.ReadLine();
                 if (text == "exit") break;
             }
+            Console.ReadKey();
         }
     }
 }

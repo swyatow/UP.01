@@ -19,7 +19,6 @@ namespace NSD_Task_01
                 {false, PurchuaseFailed},
             };
 
-
         static void Main(string[] args)
         {
             StartDialog();

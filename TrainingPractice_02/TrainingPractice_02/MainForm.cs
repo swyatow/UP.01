@@ -20,7 +20,8 @@ namespace TrainingPractice_02
         #region Кнопка выхода из игры
         private void ExitLabel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы действительно хотите выйти из приложения?", "Подтверждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Вы действительно хотите выйти из приложения?", 
+                "Подтверждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Close();
             }

@@ -13,7 +13,7 @@ namespace NSD_Task_03
 
             while (countOfTries <= 3)
             {
-                Console.WriteLine("Введите параоль");
+                Console.WriteLine("Введите пароль");
                 if(Console.ReadLine() == password)
                 {
                     Console.WriteLine(secretMessage);
@@ -21,7 +21,8 @@ namespace NSD_Task_03
                     break;
                 }else
                 {
-                    Console.WriteLine($"Пароль не верный! Осталось {3 - countOfTries} попыток.\nПосле трех попыток, программа будет закрыта!");
+                    Console.WriteLine($"Пароль не верный! Осталось {3 - countOfTries} попыток." +
+                        $"\nПосле трех попыток, программа будет закрыта!");
                     countOfTries++;
                 }
             }
